@@ -1,0 +1,9 @@
+.idea
+.cache
+.config
+.ipython
+.jupyter
+.local
+.npm
+.lets
+notebooks/.ipynb_checkpoints
