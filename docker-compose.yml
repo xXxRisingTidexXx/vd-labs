@@ -1,0 +1,20 @@
+version: '3.8'
+services:
+  notebook:
+    image: jupyter/r-notebook:29edefbcb06a
+    container_name: rampart-notebook
+    volumes:
+      - ./notebooks:/home/jovyan/notebooks
+      - ./.cache:/home/jovyan/.cache
+      - ./.config:/home/jovyan/.config
+      - ./.ipython:/home/jovyan/.ipython
+      - ./.jupyter:/home/jovyan/.jupyter
+      - ./.local:/home/jovyan/.local
+      - ./.npm:/home/jovyan/.npm
+    ports:
+      - 8888:8888
+    environment:
+      JUPYTER_ENABLE_LAB: 'yes'
+networks:
+  default:
+    name: vd-labs-default

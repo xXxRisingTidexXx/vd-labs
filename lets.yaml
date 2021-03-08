@@ -1,0 +1,8 @@
+shell: bash
+commands:
+  run:
+    description: Launch the jupyter server
+    cmd: |
+      mkdir -p notebooks .cache .config .ipython .jupyter .local .npm
+      docker-compose up notebook
+      docker-compose down
