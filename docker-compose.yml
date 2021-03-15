@@ -2,7 +2,7 @@ version: '3.8'
 services:
   notebook:
     image: jupyter/r-notebook:29edefbcb06a
-    container_name: rampart-notebook
+    container_name: vd-labs-notebook
     volumes:
       - ./notebooks:/home/jovyan/notebooks
       - ./.cache:/home/jovyan/.cache
